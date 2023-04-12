@@ -8,5 +8,5 @@ export const cloudflareLoader = ({ src, width, quality }) => {
       params.push(`quality=${quality}`);
     }
     const paramsString = params.join(',');
-    return `https://landho.me/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
+    return `/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
   };

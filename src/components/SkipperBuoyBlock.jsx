@@ -20,7 +20,7 @@ export default function SkipperBuoyBlock(props) {
                 <div className={`flex flex-row w-full relative m-10`}>
                     <Image
                         src='/skipperbuoy-block-image.jpg'
-                        alt="A spotted leopard, in Yala National Park"
+                        alt="Shipwrecked!"
                         fill
                         className={`object-scale-down ${frameColor} p-4`}
                         onClick={() => (window.open("https://skipperbuoy.landho.me", '_blank', 'noreferrer'))}

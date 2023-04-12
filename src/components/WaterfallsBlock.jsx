@@ -12,7 +12,7 @@ export default function WaterfallsBlock(props) {
             <div className="flex flex-row w-full justify-start">
                 <div className="flex flex-row w-1/2 relative m-10">
                     <Image
-                        src='https://storage.googleapis.com/portfolio-photos/portfolio/waterfalls-block-image.jpeg'
+                        src='/waterfalls-block-image.jpeg'
                         alt="Waterfalls are the best!"
                         fill
                         className={`object-scale-down ${frameColor} p-4`}

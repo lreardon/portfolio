@@ -19,7 +19,7 @@ export default function PhotosBlock(props) {
                 </div>
                 <div className="flex flex-row w-full relative m-10">
                     <Image
-                        src='https://storage.googleapis.com/portfolio-photos/portfolio/photos-block-image.jpg'
+                        src='/photos-block-image.jpg'
                         alt="A spotted leopard, in Yala National Park"
                         fill
                         className={`object-scale-down ${frameColor} p-4`}

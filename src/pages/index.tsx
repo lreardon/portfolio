@@ -10,8 +10,8 @@ export default function Home() {
       <Hero />
       <ThreeScene />
       <PhotosBlock twcssBackgroundColor='bg-orange-400' twcssFrameColor='bg-gray-400'/>
-      <WaterfallsBlock twcssBackgroundColor='bg-pink-400' twcssFrameColor='bg-blue-300'/>
-      <SkipperBuoyBlock twcssBackgroundColor='bg-green-500' twcssFrameColor='bg-green-200'/>
+      {/* <WaterfallsBlock twcssBackgroundColor='bg-pink-400' twcssFrameColor='bg-blue-300'/>
+      <SkipperBuoyBlock twcssBackgroundColor='bg-green-500' twcssFrameColor='bg-green-200'/> */}
     </div>
   );
 }

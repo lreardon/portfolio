@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-let nextConfig = {
+const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
@@ -9,8 +9,8 @@ let nextConfig = {
         port: '',
         pathname: '/portfolio-photos/portfolio/**',
       },
-    ],
-  },
+    ]
+  }
 }
 
 module.exports = nextConfig

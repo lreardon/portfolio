@@ -17,11 +17,10 @@ export default function SkipperBuoyBlock(props) {
                     </h1>
                     </div>
                 </div>
-                <div className={`flex flex-row w-full relative m-10`}>
-                    <Image
-                        src='/skipperbuoy-block-image.jpg'
+                <div className='flex flex-row w-2/3 justify-center relative mx-10'>
+                    <img
+                        src='https://storage.googleapis.com/portfolio-photos/portfolio/skipperbuoy-block-image.jpg'
                         alt="Shipwrecked!"
-                        fill
                         className={`object-scale-down ${frameColor} p-4`}
                         onClick={() => (window.open("https://skipperbuoy.landho.me", '_blank', 'noreferrer'))}
                     />

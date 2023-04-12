@@ -17,11 +17,10 @@ export default function PhotosBlock(props) {
                     </h1>
                     </div>
                 </div>
-                <div className="flex flex-row w-full relative m-10">
-                    <Image
-                        src='/photos-block-image.jpg'
-                        alt="A spotted leopard, in Yala National Park"
-                        fill
+                <div className="flex flex-row w-2/3 justify-center relative mx-10">
+                    <img
+                        src='https://storage.googleapis.com/portfolio-photos/portfolio/photos-block-image.jpg'
+                        alt="Lucas the spotted leopard, prowling around Yala National Park"
                         className={`object-scale-down ${frameColor} p-4`}
                         onClick={() => (window.open("https://photos.landho.me", '_blank', 'noreferrer'))}
                     />

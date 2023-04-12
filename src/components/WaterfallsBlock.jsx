@@ -10,11 +10,10 @@ export default function WaterfallsBlock(props) {
     return (
         <Block className={`${backgroundColor}`}>
             <div className="flex flex-row w-full justify-start">
-                <div className="flex flex-row w-1/2 relative m-10">
-                    <Image
-                        src='/waterfalls-block-image.jpeg'
+                <div className="flex flex-row w-2/3 justify-center relative mx-10">
+                    <img
+                        src='https://storage.googleapis.com/portfolio-photos/portfolio/waterfalls-block-image.jpeg'
                         alt="Waterfalls are the best!"
-                        fill
                         className={`object-scale-down ${frameColor} p-4`}
                         onClick={() => (window.open("https://waterfalls.landho.me", '_blank', 'noreferrer'))}
                     />

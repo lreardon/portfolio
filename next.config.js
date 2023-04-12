@@ -1,13 +1,16 @@
 /** @type {import('next').NextConfig} */
 let nextConfig = {
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        port: '',
+        pathname: '/portfolio-photos/portfolio/**',
+      },
+    ],
+  },
 }
-
-// if (process.env.NODE_ENV == 'production') {
-//   nextConfig.images =  {
-//     loader: 'custom',
-//     loaderFile: './src/cloudflareLoader.js'
-//   }
-// }
 
 module.exports = nextConfig

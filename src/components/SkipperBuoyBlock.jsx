@@ -19,7 +19,7 @@ export default function SkipperBuoyBlock(props) {
                 </div>
                 <div className={`flex flex-row w-full relative m-10`}>
                     <Image
-                        src='/skipperbuoy-block-image.jpg'
+                        src='https://storage.googleapis.com/portfolio-photos/portfolio/skipperbuoy-block-image.jpg'
                         alt="Shipwrecked!"
                         fill
                         className={`object-scale-down ${frameColor} p-4`}

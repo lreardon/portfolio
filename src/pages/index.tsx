@@ -9,9 +9,9 @@ export default function Home() {
     <div className='bg-green-400'>
       <Hero />
       <ThreeScene />
-      {/* <PhotosBlock twcssBackgroundColor='bg-orange-400' twcssFrameColor='bg-gray-400'/> */}
-      {/* <WaterfallsBlock twcssBackgroundColor='bg-pink-400' twcssFrameColor='bg-blue-300'/>
-      <SkipperBuoyBlock twcssBackgroundColor='bg-green-500' twcssFrameColor='bg-green-200'/> */}
+      <PhotosBlock twcssBackgroundColor='bg-orange-400' twcssFrameColor='bg-gray-400'/>
+      <WaterfallsBlock twcssBackgroundColor='bg-pink-400' twcssFrameColor='bg-blue-300'/>
+      <SkipperBuoyBlock twcssBackgroundColor='bg-green-500' twcssFrameColor='bg-green-200'/>
     </div>
   );
 }

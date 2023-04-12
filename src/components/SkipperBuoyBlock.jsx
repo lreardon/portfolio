@@ -1,7 +1,6 @@
 import React from "react";
 import Image from 'next/image'
 import Block from './Block';
-import {cloudflareLoader} from '../../cloudflareLoader'
 
 export default function SkipperBuoyBlock(props) {
     

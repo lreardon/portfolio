@@ -14,7 +14,7 @@ module.exports = (phase, { defaultConfig }) => {
     swcMinify: true,
     images: {
       loader: 'custom',
-      loaderFile: './cfImageLoader.js'
+      loaderFile: './cloudflareLoader.js'
     },
   }
 }

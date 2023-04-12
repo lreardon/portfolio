@@ -1,6 +1,7 @@
 import React from "react";
 import Image from 'next/image'
 import Block from './Block';
+import {cloudflareLoader} from './cloudflareLoader'
 
 export default function SkipperBuoyBlock(props) {
     
@@ -21,6 +22,7 @@ export default function SkipperBuoyBlock(props) {
                     <Image
                         src='/skipperbuoy-block-image.jpg'
                         alt="A spotted leopard, in Yala National Park"
+                        loader={cloudflareLoader}
                         fill
                         className={`object-scale-down ${frameColor} p-4`}
                         onClick={() => (window.open("https://skipperbuoy.landho.me", '_blank', 'noreferrer'))}

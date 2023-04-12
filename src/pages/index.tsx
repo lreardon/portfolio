@@ -2,6 +2,7 @@ import ThreeScene from "../components/ThreeScene";
 import Hero from '../components/Hero'
 import PhotosBlock from '../components/PhotosBlock'
 import WaterfallsBlock from '../components/WaterfallsBlock'
+import SkipperBuoyBlock from '../components/SkipperBuoyBlock'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <ThreeScene />
       <PhotosBlock />
       <WaterfallsBlock />
+      <SkipperBuoyBlock />
     </div>
   );
 }

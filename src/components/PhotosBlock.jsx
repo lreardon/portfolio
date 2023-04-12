@@ -15,7 +15,7 @@ export default function PhotosBlock(props) {
                 </div>
                 <div className="flex flex-row w-full relative bg-orange-400 m-10">
                     <Image
-                        src='/leopard-closer-framed.jpg'
+                        src='/photos-block-image.jpg'
                         alt="A spotted leopard, in Yala National Park"
                         fill
                         className="object-scale-down bg-gray-400 p-4"

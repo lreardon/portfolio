@@ -10,17 +10,17 @@ function PlanetProto(props) {
         </mesh>
     )
 
-    function texture(material, property, uri) {
-        let textureLoader = new THREE.TextureLoader();
-        textureLoader.crossOrigin = true;
-        textureLoader.load(
-          uri,
-          function(texture) {
-            material[property] = texture;
-            material.needsUpdate = true;
-          }
-        );
-      }
+    // function texture(material, property, uri) {
+    //     let textureLoader = new THREE.TextureLoader();
+    //     textureLoader.crossOrigin = true;
+    //     textureLoader.load(
+    //       uri,
+    //       function(texture) {
+    //         material[property] = texture;
+    //         material.needsUpdate = true;
+    //       }
+    //     );
+    //   }
 
     // function glowMaterial(intensity, fade, color) {
     //   // Custom glow shader from https://github.com/stemkoski/stemkoski.github.com/tree/master/Three.js

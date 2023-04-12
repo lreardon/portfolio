@@ -1,16 +1,20 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'storage.googleapis.com',
-        port: '',
-        pathname: '/portfolio-photos/portfolio/**',
-      },
-    ]
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
+
+module.exports = (phase, { defaultConfig }) => {
+  if (phase === PHASE_DEVELOPMENT_SERVER) {
+    return {
+      reactStrictMode: true,
+    }
+  }
+
+  // Production config
+  return {
+    swcMinify: true,
+    images: {
+      loader: 'custom',
+      loaderFile: './cfImageLoader.js'
+    },
   }
 }
-
-module.exports = nextConfig

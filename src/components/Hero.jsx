@@ -34,8 +34,12 @@ export default function Hero(props) {
                 <div className="flex flex-col">
                     <HeroImage />
                 </div>
-                    <div  className="flex flex-col justify-center bg-blue-400">
-                    <div>
+                <div className="bg-blue-400">
+                    <div className="flex flex-row gap-5">
+                        <img src='/github-logo.png' width='60' onClick={() => (window.open("https://github.com/lreardon", '_blank', 'noreferrer'))}/>
+                        <img src='/linkedin-logo.png' width='60' onClick={() => (window.open("https://linkedin.com/in/landh0", '_blank', 'noreferrer'))}/>
+                    </div>
+                    <div className='flex flex-col justify-center'>
                         <h1 className="text-3xl font-bold underline">
                             Hello world!
                         </h1>

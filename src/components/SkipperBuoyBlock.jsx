@@ -13,8 +13,11 @@ export default function SkipperBuoyBlock(props) {
                 <div className='flex flex-col justify-center items-center w-1/2'>
                     <div className="flex flex-row w-3/4">
                     <h1 className={`${frameColor} text-3xl`}>
-                        <a className='text-purple-800' href="https://skipperbuoy.landho.me" target="_blank">This site</a> brings some accountability to the high sea's devil dogs!
+                        <a className='text-purple-800' href="https://ratemyskipper.uc.r.appspot.com" target="_blank">This site</a> brings some accountability to the high sea's devil dogs!
                     </h1>
+                    </div>
+                    <div className={`${frameColor} m-4 flex-row w-3/4 text-xs`}>
+                        <p>Google App Engine + Tailwind + No $$$ = Extremely long wait on inital site load.</p>
                     </div>
                 </div>
                 <div className='flex flex-row w-2/3 justify-center relative mx-10'>
@@ -22,7 +25,7 @@ export default function SkipperBuoyBlock(props) {
                         src='https://storage.googleapis.com/portfolio-photos/portfolio/skipperbuoy-block-image.jpg'
                         alt="Shipwrecked!"
                         className={`object-scale-down ${frameColor} p-4`}
-                        onClick={() => (window.open("https://skipperbuoy.landho.me", '_blank', 'noreferrer'))}
+                        onClick={() => (window.open("https://ratemyskipper.uc.r.appspot.com", '_blank', 'noreferrer'))}
                     />
                 </div>
             </div>

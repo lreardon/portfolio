@@ -21,7 +21,7 @@ export default function WaterfallsBlock(props) {
                 <div className='flex flex-col justify-center items-center w-1/2'>
                     <div className="flex flex-row w-3/4">
                     <h1 className={`${frameColor} text-3xl`}>
-                        I also have a <a className='text-purple-800' href="https://waterfalls.landho.me" target="_blank">blog</a> documenting my favorite waterfalls!
+                        I also have a <a className='text-purple-800' href="https://waterfalls.landho.me" target="_blank">maps-based blog</a> documenting my favorite waterfalls!
                     </h1>
                     </div>
                 </div>

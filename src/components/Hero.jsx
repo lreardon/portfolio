@@ -1,13 +1,24 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import HeroImage from './HeroImage'
 import ProfessionalSummary from './ProfessionalSummary'
+import styled, { keyframes } from 'styled-components'
 
 export default function Hero(props) {
     const [professionalSummaryVisible, setProfessionalSummaryVisible] = useState(false);
+    const [professionalSummaryWasJustVisible, setProfessionalSummaryWasJustVisible] = useState(false);
+
+    const ref = useRef(null)
+
+    useEffect(() => {
+        if (professionalSummaryWasJustVisible & !professionalSummaryVisible) {
+            scrollToTop()
+        }
+    }, [professionalSummaryVisible])
 
     function toggleProfessionalSummaryVisible() {
+        //TODO: Investigate potential race condition
+        setProfessionalSummaryWasJustVisible(professionalSummaryVisible) 
         setProfessionalSummaryVisible(!professionalSummaryVisible)
-        
     }
 
     function moreOrLess() {
@@ -15,6 +26,10 @@ export default function Hero(props) {
             return 'Less';
         }
         return 'More'
+    }
+
+    function scrollToTop() {
+        ref.current.scrollIntoView({ behavior: "smooth", block: "start" })
     }
 
 
@@ -29,7 +44,7 @@ export default function Hero(props) {
     }
 
     return (
-        <div className='flex flex-col min-h-96'>
+        <div ref={ref} className='flex flex-col min-h-96'>
             <div className='flex h-full min-h-96 flex-row'>
                 <div className="flex flex-col">
                     <HeroImage />

@@ -59,7 +59,7 @@ export default function Hero(props) {
                             Hello world!
                         </h1>
                         <p className="text-xl">
-                            I am a mathematician-turned-full-stack-developer with a passion for well-structured, well-organized code. I've built and depoyed three full-stack applicaitons from scratch, and initialized techincal development for a thriving startup. My hobbies include surfing, seeking out waterfalls, taking photos, reading and coding.
+                            I am a mathematician-turned-full-stack-developer with a passion for well-structured, well-organized code. I've built and deployed three full-stack applicaitons from scratch, and initialized techincal development for a thriving startup. My hobbies include surfing, seeking out waterfalls, taking photos, reading and coding.
                         </p>
                     </div>
                 </div>

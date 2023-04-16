@@ -14,7 +14,7 @@ export default function WaterfallsBlock(props) {
                     <img
                         src='https://storage.googleapis.com/portfolio-photos/portfolio/waterfalls-block-image.jpeg'
                         alt="Waterfalls are the best!"
-                        className={`object-scale-down ${frameColor} p-4`}
+                        className={`object-scale-down ${frameColor} h-full p-4`}
                         onClick={() => (window.open("https://waterfalls.landho.me", '_blank', 'noreferrer'))}
                     />
                 </div>

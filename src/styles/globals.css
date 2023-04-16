@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  font-size: 16px;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,3 +30,36 @@ body {
     rgb(var(--background-start-rgb));
   margin: 0;
 } */
+
+
+@media screen and (max-width: 500px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-image-container {
+    width: 100vw;
+  }
+  
+  .hero-description-container {
+    width: 100vw;
+  }
+  .hero-image{
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .hero-content {
+    flex-direction: row;
+  }
+  .hero-image-container{
+    width: 33%;
+  }
+  .hero-description-container{
+    width: 67%;
+  }
+  .hero-image{
+    max-width: 100%;
+  }
+}

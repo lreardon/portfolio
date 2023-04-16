@@ -20,7 +20,7 @@ export default function SkipperBuoyBlock(props) {
                         <p>Google App Engine + Tailwind + No $$$ = Extremely long wait on inital site load.</p>
                     </div>
                 </div>
-                <div className='flex flex-row w-2/3 justify-center relative mx-10'>
+                <div className='flex flex-row w-2/3 h-full justify-center relative mx-10'>
                     <img
                         src='https://storage.googleapis.com/portfolio-photos/portfolio/skipperbuoy-block-image.jpg'
                         alt="Shipwrecked!"

@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import HeroImage from './HeroImage'
+import SocialLinks from './SocialLinks'
 import ProfessionalSummary from './ProfessionalSummary'
 import styled, { keyframes } from 'styled-components'
 
@@ -44,24 +45,19 @@ export default function Hero(props) {
     }
 
     return (
-        <div ref={ref} className='flex flex-col min-h-96'>
-            <div className='flex h-full min-h-96 flex-row'>
-                <div className="flex flex-col">
+        <div ref={ref} className='flex flex-col'>
+            <div className='flex flex-row hero-content'>
+                <div className='flex flex-col bg-red-400 hero-image-container justify-evenly'>
                     <HeroImage />
+                    <SocialLinks />
                 </div>
-                <div className="bg-blue-400">
-                    <div className="flex flex-row gap-5">
-                        <img src='/github-logo.png' width='60' onClick={() => (window.open("https://github.com/lreardon", '_blank', 'noreferrer'))}/>
-                        <img src='/linkedin-logo.png' width='60' onClick={() => (window.open("https://linkedin.com/in/landh0", '_blank', 'noreferrer'))}/>
-                    </div>
-                    <div className='flex flex-col justify-center'>
-                        <h1 className="text-3xl font-bold underline">
-                            Hello world!
-                        </h1>
-                        <p className="text-xl">
-                            I am a mathematician-turned-full-stack-developer with a passion for well-structured, well-organized code. I've built and deployed three full-stack applicaitons from scratch, and initialized techincal development for a thriving startup. My hobbies include surfing, seeking out waterfalls, taking photos, reading and coding.
-                        </p>
-                    </div>
+                <div className="flex flex-col bg-blue-400 hero-description-container justify-center">
+                    <h1 className="text-3xl font-bold underline">
+                        Hello world!
+                    </h1>
+                    <p className="text-xl">
+                        I am a mathematician-turned-full-stack-developer with a passion for well-structured, well-organized code. I've built and deployed three full-stack applicaitons from scratch, and initialized techincal development for a thriving startup. My hobbies include surfing, seeking out waterfalls, taking photos, reading and coding.
+                    </p>
                 </div>
             </div>
             <div className='flex flex-col'>

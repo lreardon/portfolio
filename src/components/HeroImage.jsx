@@ -3,11 +3,11 @@ import Image from 'next/image'
 
 export default function HeroImage(props) {
     return (
-        <div className="w-80 h-80 bg-red-400 relative">
+        <div className="flex w-full relative items-center">
             <img
                 src='https://storage.googleapis.com/portfolio-photos/portfolio/me-square.jpg'
                 alt="Hi there!"
-                className="object-scale-down rounded-full"
+                className="object-scale-down rounded-full hero-image"
             />
         </div>
     )

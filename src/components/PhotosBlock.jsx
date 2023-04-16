@@ -9,6 +9,7 @@ export default function PhotosBlock(props) {
 
     return (
         <Block className={`${backgroundColor}`}>
+            
             <div className="flex flex-row w-full">
                 <div className='flex flex-col justify-center items-center w-1/2'>
                     <div className="flex flex-row w-3/4">
@@ -17,7 +18,8 @@ export default function PhotosBlock(props) {
                     </h1>
                     </div>
                 </div>
-                <div className="flex flex-row w-2/3 justify-center relative mx-10">
+
+                <div className="flex flex-row w-2/3 h-full justify-center align-center bg-black relative mx-10">
                     <img
                         src='https://storage.googleapis.com/portfolio-photos/portfolio/photos-block-image.jpg'
                         alt="Lucas the spotted leopard, prowling around Yala National Park"

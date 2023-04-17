@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function BlockImage(props) {
     return (
-        <div className={`bg-green-100 relative m-4 block-image-container`}>
+        <div className={`bg-green-100 relative block-image-container`}>
             <img
                 src={props.src}
                 alt={props.alt}

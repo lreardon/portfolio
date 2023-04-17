@@ -47,11 +47,11 @@ export default function Hero(props) {
     return (
         <div ref={ref} className='flex flex-col'>
             <div className='flex flex-row hero-content'>
-                <div className='flex flex-col bg-red-400 hero-image-container justify-evenly'>
+                <div className='flex flex-col bg-red-400 hero-image-container justify-evenly gap-4 p-4'>
                     <HeroImage />
                     <SocialLinks />
                 </div>
-                <div className="flex flex-col bg-blue-400 hero-description-container justify-center">
+                <div className="flex flex-col bg-blue-400 hero-description-container justify-center p-4">
                     <h1 className="text-3xl font-bold underline">
                         Hello world!
                     </h1>

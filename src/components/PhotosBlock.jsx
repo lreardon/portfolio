@@ -1,33 +1,27 @@
 import React from "react";
-import Image from 'next/image'
 import Block from './Block';
+import BlockImage from './BlockImage'
+import BlockHeadline from './BlockHeadline'
 
 export default function PhotosBlock(props) {
 
     const backgroundColor = props.twcssBackgroundColor
     const frameColor = props.twcssFrameColor
+    const href = "https://photos.landho.me"
+    const imgSrc = 'https://storage.googleapis.com/portfolio-photos/portfolio/photos-block-image.jpg'
+    const imgAlt = 'Lucas the spotted leopard, prowling around Yala National Park'
 
     return (
         <Block className={`${backgroundColor}`}>
-            
-            <div className="flex flex-row w-full">
-                <div className='flex flex-col justify-center items-center w-1/2'>
-                    <div className="flex flex-row w-3/4">
-                    <h1 className={`${frameColor} text-3xl`}>
-                        From time to time I take photos, and I post my favorites <a className='text-purple-800' href="https://photos.landho.me" target="_blank">here</a>!
-                    </h1>
-                    </div>
-                </div>
-
-                <div className="flex flex-row w-2/3 h-full justify-center align-center bg-black relative mx-10">
-                    <img
-                        src='https://storage.googleapis.com/portfolio-photos/portfolio/photos-block-image.jpg'
-                        alt="Lucas the spotted leopard, prowling around Yala National Park"
-                        className={`object-scale-down ${frameColor} p-4`}
-                        onClick={() => (window.open("https://photos.landho.me", '_blank', 'noreferrer'))}
-                    />
-                </div>
-            </div>
+            <BlockHeadline frameColor={frameColor} >
+                From time to time I take photos, and I post my favorites <a className='text-purple-800' href={"https://photos.landho.me"} target="_blank">here</a>!
+            </BlockHeadline>
+            <BlockImage
+                src={imgSrc}
+                alt={imgAlt}
+                frameColor={frameColor}
+                href={href}
+            />
         </Block>
     );
 }

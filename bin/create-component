@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# check if argument exists
+if [ -z "$1" ]
+then
+    echo "Please provide a component name as an argument."
+    exit 1
+fi
+
+# create component file with provided name
+touch "src/components/$1.jsx"
+
+# write component code to file
+echo "import React from 'react';
+
+export default function $1(props) {
+    return (
+        <div className=''>
+            
+        </div>
+    );
+}" > "src/components/$1.jsx"
+
+echo "Component created successfully."

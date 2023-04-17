@@ -7,7 +7,7 @@ import SkipperBuoyBlock from '../components/SkipperBuoyBlock'
 export default function Home() {
   return (
     <div  className='h-screen flex flex-col align-center'>
-      <div className='bg-green-400 flex flex-col max-w-screen-2xl self-center'>
+      <div className='bg-green-400 flex flex-col max-w-screen-xl self-center'>
         <Hero />
         {/* <ThreeScene /> */}
         <PhotosBlock twcssBackgroundColor='bg-orange-400' twcssFrameColor='bg-gray-400'/>

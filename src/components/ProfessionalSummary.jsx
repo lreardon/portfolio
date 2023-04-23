@@ -46,7 +46,7 @@ export default function ProfessionalSummary({visible}) {
                     </BionicParagraph>
                 <br/>
                 <div className='flex flex-row justify-center'>
-                    <p className='font-bold'>leland6925@gmail.com</p>
+                    <img src='email.svg' />
                 </div>
             </div>
         )

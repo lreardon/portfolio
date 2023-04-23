@@ -1,5 +1,4 @@
 import React from "react";
-import Image from 'next/image'
 import Block from './Block';
 import BlockImage from './BlockImage'
 import BlockHeadline from './BlockHeadline'
@@ -8,7 +7,7 @@ export default function SkipperBuoyBlock(props) {
     
     const backgroundColor = props.twcssBackgroundColor
     const frameColor = props.twcssFrameColor
-    const href = "https://ratemyskipper.uc.r.appspot.com"
+    const href = "https://skipperbuoy.landho.me"
     const imgSrc = 'https://storage.googleapis.com/portfolio-photos/portfolio/skipperbuoy-block-image.jpg'
     const imgAlt = "Shipwrecked!"
 

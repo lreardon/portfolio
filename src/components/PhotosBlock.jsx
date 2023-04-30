@@ -8,7 +8,7 @@ export default function PhotosBlock(props) {
     const backgroundColor = props.twcssBackgroundColor
     const frameColor = props.twcssFrameColor
     const href = "https://photos.landho.me"
-    const imgSrc = 'https://storage.googleapis.com/portfolio-photos/portfolio/photos-block-image.jpg'
+    const imgSrc = 'https://storage.googleapis.com/portfolio-photos/leopard-far-lighter-2.jpg'
     const imgAlt = 'Lucas the spotted leopard, prowling around Yala National Park'
 
     return (

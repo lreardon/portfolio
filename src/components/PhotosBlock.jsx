@@ -13,15 +13,15 @@ export default function PhotosBlock(props) {
 
     return (
         <Block className={`${backgroundColor}`}>
-            <BlockHeadline frameColor={frameColor} >
-                From time to time I take photos, and I post my favorites <a className='text-purple-800' href={"https://photos.landho.me"} target="_blank">here</a>!
-            </BlockHeadline>
             <BlockImage
                 src={imgSrc}
                 alt={imgAlt}
                 frameColor={frameColor}
                 href={href}
             />
+            <BlockHeadline frameColor={frameColor} >
+                From time to time I take photos, and I post my favorites <a className='text-purple-800' href={"https://photos.landho.me"} target="_blank">here</a>!
+            </BlockHeadline>
         </Block>
     );
 }

@@ -12,7 +12,7 @@ export default function SkipperBuoyBlock(props) {
     const imgAlt = "Shipwrecked!"
 
     return (
-        <Block className={`${backgroundColor} flex-row-reverse`} href={href}>
+        <Block className={`${backgroundColor} flex-row-reverse`}>
             <BlockImage
                 src={imgSrc}
                 alt={imgAlt}

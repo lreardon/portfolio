@@ -14,15 +14,15 @@ export default function WaterfallsBlock(props) {
 
     return (
         <Block className={`${backgroundColor} flex-row-reverse`}>
-            <BlockHeadline frameColor={frameColor}>
-                I also have a <a className='text-purple-800' href="https://waterfalls.landho.me" target="_blank">maps-based blog</a> documenting my favorite waterfalls!
-            </BlockHeadline>
             <BlockImage
                 src={imgSrc}
                 alt={imgAlt}
                 frameColor={frameColor}
                 href={href}
             />
+            <BlockHeadline frameColor={frameColor}>
+                I also have a <a className='text-purple-800' href="https://waterfalls.landho.me" target="_blank">maps-based blog</a> documenting my favorite waterfalls!
+            </BlockHeadline>
         </Block>
     );
 }

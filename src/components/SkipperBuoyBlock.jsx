@@ -12,16 +12,16 @@ export default function SkipperBuoyBlock(props) {
     const imgAlt = "Shipwrecked!"
 
     return (
-        <Block className={backgroundColor} href={href}>
-            <BlockHeadline frameColor={frameColor}>
-                <a className='text-purple-800' href={href} target="_blank">This site</a> brings some accountability to the high seas' devil dogs!
-            </BlockHeadline>
+        <Block className={`${backgroundColor} flex-row-reverse`} href={href}>
             <BlockImage
                 src={imgSrc}
                 alt={imgAlt}
                 frameColor={frameColor}
                 href={href}
             />
+            <BlockHeadline frameColor={frameColor}>
+                <a className='text-purple-800' href={href} target="_blank">This site</a> brings some accountability to the high seas' devil dogs!
+            </BlockHeadline>
         </Block>
     )
 }

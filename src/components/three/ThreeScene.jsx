@@ -1,12 +1,8 @@
 import React from 'react'
 import { Canvas } from "@react-three/fiber";
-import Box from "../components/Box";
-import LightBulb from "../components/LightBulb";
-import Floor from "../components/Floor";
-import OrbitControls from "../components/OrbitControls";
-import Draggable from "../components/Draggable";
-import {Suspense} from "react";
-import css from "../styles/Home.module.css";
+import LightBulb from "./LightBulb";
+import Floor from "./Floor";
+import OrbitControls from "./OrbitControls";
 
 export default function ThreeScene(props) {
 return (

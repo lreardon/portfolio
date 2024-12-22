@@ -1,7 +1,7 @@
 import React from "react";
-import Block from "./Block";
-import BlockImage from './BlockImage';
-import BlockHeadline from './BlockHeadline';
+import Block from "@components/block/Block";
+import BlockImage from '@components/block/BlockImage';
+import BlockHeadline from '@components/block/BlockHeadline';
 
 
 export default function WaterfallsBlock(props) {

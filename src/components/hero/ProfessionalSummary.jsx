@@ -1,10 +1,12 @@
 import React from 'react'
-import BionicParagraph from './BionicParagraph'
+import BionicParagraph from '@/components/hero/BionicParagraph'
 
 export default function ProfessionalSummary({visible}) {
     if (visible) {
         return (
             <div className='p-4'>
+                <div><a target="_blank" href="https://www.reddit.com/r/coolguides/comments/ut3x75/bionic_reading_does_this_help_you/"><strong>What the heck is this font?</strong></a></div>
+                <br/>
                 <BionicParagraph>
                     My coding career started off in earnest after I graduated from college, while I was living out of a van and working as a table-busser and food-runner at a local restaurant. Every morning I would wake up, pack my backpack, leave the lair, and stroll down the hill to the cafe. After ordering a capuccino and a poppyseed bagel with cream cheese, I would sit down, open up the computer, and... learn.
                 </BionicParagraph>
@@ -38,12 +40,16 @@ export default function ProfessionalSummary({visible}) {
                 </BionicParagraph>
                 <br/>
                 <BionicParagraph>
-                    Since finishing on the boat I have taken a holiday, traveling to Morocco, the Philippines, Sri Lanka, and now Nepal, surfing, seeking out waterfalls, and hiking along the way. In late February I began coding again with some regularity, and have since built three small web sites: a maps-based blog of my favorite waterfalls; a gallery for showcasing my favorite photos (mostly animals); and a simple Rails app allowing deckhands to review their skippers, to bring accountability to the commercial fishing industry.
+                    After finishing on the boat I took a holiday, traveling to Morocco, the Philippines, Sri Lanka, Nepal, and around Europe, surfing, seeking out waterfalls, and hiking along the way. In late February of 2023 I began coding again with some regularity and built three small web sites: a maps-based blog of my favorite waterfalls; a gallery for showcasing my favorite photos (mostly animals); and a simple Rails app allowing deckhands to review their skippers, to bring accountability to the commercial fishing industry.
+                </BionicParagraph>
+                <br/>
+                <BionicParagraph>
+                A few months later I began working with Akada, an enterprise software company providing backend solutions to dance studios across the world. In addition to the standard fare of software development, I've been heavily involved in all apsects of project management, including ideation, design, and personnel and project management, as we modernize their existing tech and build new products.
                 </BionicParagraph>
                 <br/>
                 <BionicParagraph>
                     If, for whatever reason, you'd like to chat, or if you are looking for a developer for your next project, send me an email at:
-                    </BionicParagraph>
+                </BionicParagraph>
                 <br/>
                 <div className='flex flex-row justify-center'>
                     <img src='email.svg' />

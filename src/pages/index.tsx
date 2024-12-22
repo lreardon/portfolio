@@ -1,8 +1,8 @@
-import ThreeScene from "../components/ThreeScene";
-import Hero from '../components/Hero'
-import PhotosBlock from '../components/PhotosBlock'
-import WaterfallsBlock from '../components/WaterfallsBlock'
-import SkipperBuoyBlock from '../components/SkipperBuoyBlock'
+import ThreeScene from "../components/three/ThreeScene";
+import Hero from '@/components/hero/Hero'
+import PhotosBlock from '@/blocks/PhotosBlock'
+import WaterfallsBlock from '@/blocks/WaterfallsBlock'
+import SkipperBuoyBlock from '@/blocks/SkipperBuoyBlock'
 
 export default function Home() {
   return (

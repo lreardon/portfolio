@@ -1,8 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
-import HeroImage from './HeroImage'
-import SocialLinks from './SocialLinks'
-import ProfessionalSummary from './ProfessionalSummary'
-import styled, { keyframes } from 'styled-components'
+import HeroImage from '@/components/hero/HeroImage'
+import SocialLinks from '@components/hero/SocialLinks'
+import ProfessionalSummary from '@/components/hero/ProfessionalSummary'
 
 export default function Hero(props) {
     const [professionalSummaryVisible, setProfessionalSummaryVisible] = useState(false);
@@ -34,13 +33,13 @@ export default function Hero(props) {
     }
 
 
-    function ToggleSummaryButton(props) {
+    function ReadMoreButton(props) {
         return(
-            <div className='bg-purple-500' onClick={toggleProfessionalSummaryVisible}>
+            <button className='bg-purple-500 ' onClick={toggleProfessionalSummaryVisible}>
                 <h1 className='text-3xl'>
                     {`Read ${moreOrLess()}`}
                 </h1>
-            </div>
+            </button>
         )
     }
 
@@ -56,18 +55,22 @@ export default function Hero(props) {
                         Hello world!
                     </h1>
                     <p className="text-xl">
-                        I am a mathematician-turned-full-stack-developer with a passion for well-structured, well-organized code. I've built and deployed three full-stack applications from scratch, and initialized techincal development for a thriving startup. My hobbies include surfing, seeking out waterfalls, taking photos, reading and coding.
+                        I am a mathematician-turned-full-stack-developer with a passion for well-structured, well-organized code. I've built and deployed full-stack applications from scratch, initialized techincal development for startups, and modernized legacy applications and built new solutions for established companies.
+                    </p>
+                    <br/>
+                    <p className="text-xl">
+                       My hobbies include surfing, seeking out waterfalls, taking photos, climbing trees, reading and coding.
                     </p>
                 </div>
             </div>
             <div className='flex flex-col'>
                 <div className='flex flex-row justify-center'>
-                    <ToggleSummaryButton />
+                    <ReadMoreButton />
                 </div>
                 <ProfessionalSummary visible={professionalSummaryVisible}/>
                 {professionalSummaryVisible ? 
                     <div className='flex flex-row justify-center'>
-                        <ToggleSummaryButton />
+                        <ReadMoreButton />
                     </div> : null}
             </div>
         </div>

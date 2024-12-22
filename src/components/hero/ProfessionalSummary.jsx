@@ -5,7 +5,7 @@ export default function ProfessionalSummary({visible}) {
     if (visible) {
         return (
             <div className='p-4'>
-                <div><a target="_blank" href="https://www.reddit.com/r/coolguides/comments/ut3x75/bionic_reading_does_this_help_you/"><strong>What the heck is this font?</strong></a></div>
+                <div class="flex justify-center"><a target="_blank" href="https://www.reddit.com/r/coolguides/comments/ut3x75/bionic_reading_does_this_help_you/"><strong>What the heck is this font?</strong></a></div>
                 <br/>
                 <BionicParagraph>
                     My coding career started off in earnest after I graduated from college, while I was living out of a van and working as a table-busser and food-runner at a local restaurant. Every morning I would wake up, pack my backpack, leave the lair, and stroll down the hill to the cafe. After ordering a capuccino and a poppyseed bagel with cream cheese, I would sit down, open up the computer, and... learn.

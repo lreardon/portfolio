@@ -5,6 +5,7 @@ import BlockHeadline from '@/components/block/BlockHeadline'
 
 export default function PhotosBlock(props) {
 
+    const imageLeft = props.imageLeft
     const backgroundColor = props.twcssBackgroundColor
     const frameColor = props.twcssFrameColor
     const href = "https://photos.landho.me"
@@ -12,16 +13,22 @@ export default function PhotosBlock(props) {
     const imgAlt = 'Lucas the spotted leopard, prowling around Yala National Park'
 
     return (
-        <Block className={`${backgroundColor}`}>
-            <BlockImage
-                src={imgSrc}
-                alt={imgAlt}
-                frameColor={frameColor}
-                href={href}
-            />
-            <BlockHeadline frameColor={frameColor} >
-                From time to time I take photos, and I post my favorites <a className='text-purple-800' href={"https://photos.landho.me"} target="_blank">here</a>!
-            </BlockHeadline>
-        </Block>
+        <Block
+            backgroundColor={backgroundColor}
+            imageLeft={imageLeft}
+            image={
+                <BlockImage
+                    src={imgSrc}
+                    alt={imgAlt}
+                    frameColor={frameColor}
+                    href={href}
+                />
+            }
+            headline={
+                <BlockHeadline frameColor={frameColor} >
+                    From time to time I take photos, and I post my favorites <a className='text-purple-800' href={"https://photos.landho.me"} target="_blank">here</a>!
+                </BlockHeadline>
+            }
+        />
     );
 }

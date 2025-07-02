@@ -1,14 +1,55 @@
 #!/bin/bash
 
-# Check if the correct number of arguments are provided
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <input_image>"
+# Check if ImageMagick is installed
+if ! command -v magick &> /dev/null; then
+    echo "ImageMagick is not installed. Please install it and try again."
     exit 1
 fi
 
-# Check if ImageMagick is installed
-if ! command -v convert &> /dev/null; then
-    echo "ImageMagick is not installed. Please install it and try again."
+# Check if gcloud is installed
+if ! command -v gcloud &> /dev/null; then
+    echo "Google Cloud SDK is not installed. Please install it and try again."
+    exit 1
+fi
+
+# Initialize variables
+use_photos_dir=false
+input_image=""
+bucket_name="portfolio-photos"
+location_prefix=""
+
+
+# Parse command line arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -p)
+            use_photos_dir=true
+            shift
+            ;;
+        -l)
+            location_prefix="$2"
+            # Add trailing slash if not present and not empty
+            if [[ -n "$location_prefix" && "$location_prefix" != */ ]]; then
+                location_prefix="$location_prefix/"
+            fi
+            shift 2
+            ;;
+        *)
+            if [ -z "$input_image" ]; then
+                input_image="$1"
+            else
+                echo "Error: Too many arguments"
+                echo "Usage: $0 [-p] [-l location_prefix] <input_image>"
+                exit 1
+            fi
+            shift
+            ;;
+    esac
+done
+
+# Check if input_image is provided
+if [ -z "$input_image" ]; then
+    echo "Usage: $0 [-p] [-l location_prefix] <input_image>"
     exit 1
 fi
 
@@ -16,14 +57,77 @@ get_file_by_name() {
     local directory="$1"
     local name="$2"
     
-    find "$directory" -type f -path "*/$name.jpg -print -quit"
+    # Try to find both jpg and png files
+    local found_file
+    found_file=$(find "$directory" -type f \( -name "$name.jpg" -o -name "$name.png" \) -print -quit)
+    echo "$found_file"
 }
 
-input_image=$1
-output_image=$2
+# Determine the file path
+if [ "$use_photos_dir" = true ]; then
+    file=$(get_file_by_name "$HOME/photos/edited" "$input_image")
+else
+    # Use relative path from current working directory
+    # Check if file already has extension
+    if [[ "$input_image" == *.jpg ]] || [[ "$input_image" == *.png ]]; then
+        file="./$input_image"
+    else
+        # Try to find file with jpg or png extension
+        if [ -f "./$input_image.jpg" ]; then
+            file="./$input_image.jpg"
+        elif [ -f "./$input_image.png" ]; then
+            file="./$input_image.png"
+        else
+            file="./$input_image"
+        fi
+    fi
+fi
 
-file = $(get_file_by_name "~/photos/edited" "$input_image")
+# Check if file exists
+if [ ! -f "$file" ]; then
+    echo "Error: File '$file' not found"
+    exit 1
+fi
 
+# Get the base name and extension
+base_name=$(basename "$input_image")
+base_name_no_ext="${base_name%.*}"
+file_extension="${file##*.}"
 
-# Resize the image
-convert "file" -resize 640x "./tmp/640_$($input_image)"
+# Create tmp directory if it doesn't exist
+mkdir -p ./tmp
+
+# Resize the image (convert automatically handles different formats)
+resized_file="./tmp/640_${base_name_no_ext}.${file_extension}"
+magick "$file" -resize 640x "$resized_file"
+
+echo "Resized image saved to: $resized_file"
+
+# Construct the bucket paths
+original_bucket_path="gs://${bucket_name}/${location_prefix}${base_name}/original.${file_extension}"
+resized_bucket_path="gs://${bucket_name}/${location_prefix}${base_name}/640.${file_extension}"
+
+# Upload original to Google Cloud Storage
+echo "Uploading original to Google Cloud Storage..."
+if gcloud storage cp "$file" "$original_bucket_path"; then
+    echo "Successfully uploaded original to: $original_bucket_path"
+    echo "Public URL: https://storage.googleapis.com/${bucket_name}/${location_prefix}original.${file_extension}"
+else
+    echo "Error: Failed to upload original to Google Cloud Storage"
+    exit 1
+fi
+
+# Upload resized to Google Cloud Storage
+echo "Uploading resized version to Google Cloud Storage..."
+if gcloud storage cp "$resized_file" "$resized_bucket_path"; then
+    echo "Successfully uploaded resized to: $resized_bucket_path"
+    echo "Public URL: https://storage.googleapis.com/${bucket_name}/${location_prefix}640.${file_extension}"
+    
+    # Optionally remove the local resized file
+    rm "$resized_file"
+else
+    echo "Error: Failed to upload resized version to Google Cloud Storage"
+    exit 1
+fi
+
+echo "Upload complete!"

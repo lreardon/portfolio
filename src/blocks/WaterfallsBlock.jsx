@@ -9,7 +9,7 @@ export default function WaterfallsBlock(props) {
     const backgroundColor = props.twcssBackgroundColor
     const frameColor = props.twcssFrameColor
     const href = "https://waterfalls.landho.me"
-    const imgSrc = 'https://storage.googleapis.com/portfolio-photos/portfolio/waterfalls-block-image.jpeg'
+    const imgSrc = 'https://storage.googleapis.com/portfolio-photos/portfolio/waterfalls-block-image/640.jpg'
     const imgAlt = "Waterfalls are the best!"
 
     return (

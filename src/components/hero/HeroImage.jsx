@@ -4,7 +4,7 @@ export default function HeroImage(props) {
     return (
         <div className="flex w-full relative justify-center items-center">
             <img
-                src='https://storage.googleapis.com/portfolio-photos/portfolio/me-square.jpg'
+                src='https://storage.googleapis.com/portfolio-photos/portfolio/me-square/640.jpg'
                 alt="Hi there!"
                 className="object-scale-down rounded-full hero-image"
             />

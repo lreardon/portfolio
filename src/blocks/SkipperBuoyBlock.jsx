@@ -8,7 +8,7 @@ export default function SkipperBuoyBlock(props) {
     const backgroundColor = props.twcssBackgroundColor
     const frameColor = props.twcssFrameColor
     const href = "https://skipperbuoy.com"
-    const imgSrc = 'https://storage.googleapis.com/portfolio-photos/portfolio/skipperbuoy-block-image.jpg'
+    const imgSrc = 'https://storage.googleapis.com/portfolio-photos/portfolio/skipperbuoy-block-image/640.jpg'
     const imgAlt = "Shipwrecked!"
 
     return (

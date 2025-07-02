@@ -8,11 +8,11 @@ export default function ProfessionalSummary({visible}) {
                 <div class="flex justify-center"><a target="_blank" href="https://www.reddit.com/r/coolguides/comments/ut3x75/bionic_reading_does_this_help_you/"><strong>What the heck is this font?</strong></a></div>
                 <br/>
                 <BionicParagraph>
-                    My coding career started off in earnest after I graduated from college, while I was living out of a van and working as a table-busser and food-runner at a local restaurant. Every morning I would wake up, pack my backpack, leave the lair, and stroll down the hill to the cafe. After ordering a capuccino and a poppyseed bagel with cream cheese, I would sit down, open up the computer, and... learn.
+                    My coding career started off in earnest after I graduated from college, while I was living out of a van and working as a table-busser and food-runner at a local restaurant. Every morning I would wake up, pack my backpack, leave the lair, and stroll down the hill to the cafe. After ordering a cappuccino and a poppyseed bagel with cream cheese, I would sit down, open up the computer, and... learn.
                 </BionicParagraph>
                 <br/>
                 <BionicParagraph>
-                    I experimented with a wide variety of projects including a machine-learning image classification model to distinguish between trash and various types of recyclable materials (utilizing Jeremy Howard's fast.ai libraries) and crypto-currency ML trading and arbitrage programs. As an aside: though not surprising, it was nonetheless fascinating to observe that, even in 2018, after accounting for exchange and network fees, the market was already operating at perfect efficiency.
+                    I experimented with a wide variety of projects including a machine-learning image classification model to distinguish between trash and various types of recyclable materials (utilizing Jeremy Howard's fast.ai libraries), a Game-Of-Life-inspired automata engine with more intricate behaviors and environments, and cryptocurrency ML- and arbitrage-based trading programs (though not surprising, it was nonetheless fascinating to observe that, even in 2018, after accounting for exchange and network fees, the market was already operating at perfect efficiency).
                 </BionicParagraph>
                 <br/>
                 <BionicParagraph>
@@ -40,7 +40,7 @@ export default function ProfessionalSummary({visible}) {
                 </BionicParagraph>
                 <br/>
                 <BionicParagraph>
-                    In February 2022 I was approached by a team of founders to kick off application development for Makua, a nacent startup aiming to leverage modern technology to make donating to nonprofits easy and appealing for the next generation. Provided only with a Miro Storyboard, I ideated and then built the app's API from scratch, dockerized a development environment, including seeding scripts, consulted on feature prioritization from the perspectives of userbase growth and feature complexity, and hired two full-time engineers, including pre-vetting, conducting interviews, and collaborating with the founders to reach final hiring decisions. Both engineers are still with the company, which had, within a year, already launched its application for web and iOS and onboarded dozens of nonprofits and hundreds of users.
+                    In February 2022 I was approached by a team of founders to kick off application development for Makua, a nascent startup aiming to leverage modern technology to make donating to nonprofits easy and appealing for the next generation. Provided only with a Miro Storyboard, I ideated and then built the app's API from scratch, dockerized a development environment, including seeding scripts, consulted on feature prioritization from the perspectives of userbase growth and feature complexity, and hired two full-time engineers, including pre-vetting, conducting interviews, and collaborating with the founders to reach final hiring decisions. Both engineers are still with the company, which had, within a year, already launched its application for web and iOS and onboarded dozens of nonprofits and hundreds of users.
                 </BionicParagraph>
                 <br/>
                 <BionicParagraph>
@@ -52,7 +52,7 @@ export default function ProfessionalSummary({visible}) {
                 </BionicParagraph>
                 <br/>
                 <BionicParagraph>
-                    A few months later I began working with Akada, an enterprise software company providing backend solutions to dance studios across the world. As the sole code-owner and contributor, I have built and continue to maintain and add features to two cross-platform applications, utilizing the Flutter framework (over the Dart programming language). In addition to the standard fare of software development, I've been heavily involved in all apsects of project management, including ideation, design, and personnel and project management, as we modernize their existing tech and build new products.
+                    A few months later I began working with Akada, an enterprise software company providing backend solutions to dance studios across the world. As the sole code-owner and contributor, I have built and continue to maintain and add features to two cross-platform applications, utilizing the Flutter framework (over the Dart programming language). In addition to the standard fare of software development, I've been heavily involved in all aspects of project management, including ideation, design, and personnel and project management, as we modernize their existing tech and build new products.
                 </BionicParagraph>
                 <br/>
                 <BionicParagraph>
@@ -68,7 +68,7 @@ export default function ProfessionalSummary({visible}) {
                 </BionicParagraph>
                 <br/>
                 <div className='flex flex-row justify-center'>
-                    <img src='email.svg' />
+                    <img src='email.svg' alt='My email address, in image form to discourage crawlers.'/>
                 </div>
             </div>
         )

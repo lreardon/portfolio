@@ -1,8 +1,7 @@
-// next.config.js
-/** @type {import('next').NextConfig} */
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
+import type { NextConfig } from 'next'
+import { PHASE_DEVELOPMENT_SERVER } from 'next/constants'
 
-module.exports = (phase, { defaultConfig }) => {
+export default function nextConfig(phase: string): NextConfig {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
       reactStrictMode: true,
@@ -11,7 +10,6 @@ module.exports = (phase, { defaultConfig }) => {
 
   // Production config
   return {
-    swcMinify: true,
     images: {
       loader: 'custom',
       loaderFile: './cfImageLoader.js'

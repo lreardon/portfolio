@@ -4,8 +4,11 @@ export default function HeroImage(props) {
     return (
         <div className="flex w-full relative justify-center items-center">
             <img
-                src='https://storage.googleapis.com/portfolio-photos/portfolio/me-square/640.jpg'
-                alt="Hi there!"
+                src='/me-square-640.jpg'
+                width={640}
+                height={640}
+                fetchPriority='high'
+                alt="Leland Reardon"
                 className="object-scale-down rounded-full hero-image"
             />
         </div>

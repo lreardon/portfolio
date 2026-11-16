@@ -28,6 +28,7 @@ export default function Home({ photos }: { photos: Record<string, string> }) {
       </Head>
       <main className='bg-green-400 flex flex-col self-center'>
         <Hero />
+        <div className='bg-orange-500 p-2 text-center text-xl font-bold'>🚧 Under Construction 🚧</div>
         {projects.map((project, index) => (
           <ProjectCard key={project.slug} project={project} photo={photos[project.slug]} imageLeft={index % 2 === 0} />
         ))}

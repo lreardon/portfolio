@@ -13,6 +13,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'lever',
+    name: 'lever',
+    description:
+      "lever builds web applications from a user's idea by running a graph of AI agents with automated oversight. Agents help the user flesh out ideas, then run the project through adversarial planning and implemenation phases. Agents run on various models, curated for performance and cost. Every user's project runs in its own Docker container, and finished projects can be hosted behind the owner's login.",
+    technologies: ['Python', 'LangGraph', 'Claude Agent SDK', 'FastAPI', 'Docker', 'Cloudflare Tunnel'],
+    backgroundColor: 'bg-indigo-500',
+    frameColor: 'bg-indigo-100',
+  },
+  {
     slug: 'echolect',
     name: 'Echolect',
     description:
